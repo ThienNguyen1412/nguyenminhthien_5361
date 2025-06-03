@@ -1,0 +1,22 @@
+﻿@model nguyenminhthien_5361.Models.Product
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="row g-0">
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <div class="col-md-4">
+                    <img src="@Model.ImageUrl" class="img-fluid rounded-start" alt="Product Image">
+                </div>
+            }
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">@Model.Name</h2>
+                    <h4 class="card-text text-primary">Price: @Model.Price.ToString("C")</h4>
+                    <p class="card-text">@Model.Description</p>
+                    <a asp-action="Index" class="btn btn-secondary mt-3">← Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
