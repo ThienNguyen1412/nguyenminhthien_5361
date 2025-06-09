@@ -1,4 +1,9 @@
 ﻿@model nguyenminhthien_5361.Models.Product
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
 <h2>Delete Product</h2>
 <form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="Id" />
